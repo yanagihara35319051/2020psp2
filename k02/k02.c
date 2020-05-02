@@ -7,7 +7,7 @@ extern double p_stdnorm(double z);
 
 int main(void)
 {
-    double val_a,val_b;
+    double val;
     double z_a, z_b, u_a=173.2, u_b=170.5, var_a=33, var_b=32;
     double p_a, p_b , max_val=1, min_val=1;
     char fname[FILENAME_MAX];
@@ -26,13 +26,11 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    /*while(fgets(buf,sizeof(buf),fp) != NULL){ */
-      /*  sscanf(buf,"%lf",&val);  */
-    /*}  */
-    while(fscanf(fp, "%lf,%lf",&val_a,&val_b) !=EOF){
-      
-      z_a = (val_a - u_a)/sqrt(var_a);
-      z_b = (val_b - u_b)/sqrt(var_b);
+    while(fgets(buf,sizeof(buf),fp) != NULL){ 
+      sscanf(buf,"%lf",&val);    
+          
+      z_a = (val - u_a)/sqrt(var_a);
+      z_b = (val - u_b)/sqrt(var_b);
 
       p_a = p_stdnorm(z_a);
       p_b = p_stdnorm(z_b);
