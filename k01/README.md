@@ -90,12 +90,13 @@ aa83988848 薗田光太郎
 ## 入出力結果
 
 ```
-input the filename of sample:../sample/heights_male.csv
-the filename of sample: ../sample/heights_male.csv
-sample mean：
-sample variance：
-population mean (estimated)：
-population variance (estimated)：
+input the filename of sample:heights_male.csv
+the filename of sample: heights_male.csv
+average=173.888750
+variance=25.361711
+
+population variance=22.191497
+population average=173.888750
 ```
 
 ## 修正履歴
@@ -104,3 +105,5 @@ population variance (estimated)：
 - p_var（不偏分散）の計算が間違っています．
 - 標本サイズが入る変数 N を doubleで宣言していますが，Nには整数しか入らないので，intにしてください．計算の都合上doubleにする場合にはキャストを使って，`(double) N`などとしてください．
 - レポートに入出力結果をコピペしてください．（例は消してください．）
+
+
