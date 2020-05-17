@@ -5,7 +5,7 @@
 
 extern double ave_online(double val,double ave);
 extern double var_online(double val, double ave, double square_ave);
-double N;
+int N;
 
 int main(void)
 {   
@@ -45,7 +45,7 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    p_var = ((N-1)/N)* var;
+    p_var = (((double)N-1.0)/(double)N)* var;
 
     printf("average=%lf\n",ave);
     printf("variance=%lf\n\n",var);
@@ -61,8 +61,8 @@ double ave_online(double val,double ave)
 {
     double ave_result;
 
-    ave_result = (((N - 1) / N) * ave)+ (1 / N * val) ; 
-
+    ave_result = ((((double)N-1)/(double)N) * ave)+ (1 / (double)N * val) ; 
+    
     return ave_result;
 }
 
@@ -70,9 +70,9 @@ double var_online(double val, double ave, double square_ave)
 {
     double var_result,add_1,add_2;
     //式の前半の計算
-    add_1 = ( (( N - 1 ) / N) * square_ave) + ( (1 / N) * pow(val,2));
+    add_1 = ( (( (double)N - 1 ) / (double)N) * square_ave) + ( (1 / (double)N) * pow(val,2));
     //式の後半の計算
-    add_2 = (((N-1)/N) * ave) + ((1/N)*val);
+    add_2 = (((double)N-1)/(double)N * ave) + ((1/(double)N)*val);
     add_2 = pow(add_2,2);
 
     var_result = add_1 - add_2;
