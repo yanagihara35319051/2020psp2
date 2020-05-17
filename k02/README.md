@@ -32,8 +32,9 @@ aa83988848 薗田光太郎
 ## 入出力結果
 
 ```
-Likelihood for A：
-Likelihood for B：
+the filename of sample: heights_male.csv
+L_A: 0.000028004
+L_B: 0.000006
 ```
 
 ## 修正履歴

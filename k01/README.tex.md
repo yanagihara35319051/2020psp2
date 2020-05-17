@@ -36,7 +36,7 @@ $$u^2=\dfrac{1}{N-1}\sum_{i=1}^{N}\left(x_{i}-\bar{x}\right)^2=\dfrac{N}{N-1}s^2
 
 ## 入出力結果
 
-```
+```https://www.mext.go.jp/sports/b_menu/toukei/kodomo/zencyo/1411922_00001.html
 input the filename of sample:../sample/heights_male.csv
 the filename of sample: ../sample/heights_male.csv
 sample mean：
