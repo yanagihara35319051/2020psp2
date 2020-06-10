@@ -12,6 +12,7 @@ int main(void)
     double ave = 0,var = 0,square_ave=0;
     double p_var;
     double val;
+    double se;
     char fname[FILENAME_MAX];
     char buf[256];
     FILE* fp;
@@ -45,13 +46,14 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    p_var = (((double)N-1.0)/(double)N)* var;
-
+    p_var = ((double)N/((double)N-1.0))* var;
+    se = sqrt(p_var/(double)N);
     printf("average=%lf\n",ave);
     printf("variance=%lf\n\n",var);
     printf("population variance=%lf\n",p_var);
     printf("population average=%lf\n",ave);
-    
+    printf("standard error=%lf\n",se);
+
     return 0;
 
 
