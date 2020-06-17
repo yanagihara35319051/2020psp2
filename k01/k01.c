@@ -48,11 +48,11 @@ int main(void)
 
     p_var = ((double)N/((double)N-1.0))* var;
     se = sqrt(p_var/(double)N);
-    printf("average=%lf\n",ave);
-    printf("variance=%lf\n\n",var);
-    printf("population variance=%lf\n",p_var);
-    printf("population average=%lf\n",ave);
-    printf("standard error=%lf\n",se);
+    printf("average=%.2f\n",ave);
+    printf("variance=%.2f\n\n",var);
+    printf("population variance=%.2f\n",p_var);
+    printf("population average=%.2f\n",ave);
+    printf("standard error=%.2f\n",se);
 
     return 0;
 

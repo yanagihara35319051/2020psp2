@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
-#define MU_A 173.2
-#define MU_B 170.5
-#define VAR_A 33
-#define VAR_B 32
+#define MU_A 170.8
+#define MU_B 169.7
+#define VAR_A 5.43
+#define VAR_B 5.5
 extern double p_stdnorm(double z);
 
 int main(void)
@@ -32,8 +32,8 @@ int main(void)
     while(fgets(buf,sizeof(buf),fp) != NULL){ 
       sscanf(buf,"%lf",&val);    
           
-      z_a = (val - mu_a)/sqrt(var_a);
-      z_b = (val - mu_b)/sqrt(var_b);
+      z_a = (val - mu_a)/var_a;
+      z_b = (val - mu_b)/var_b;
 
       p_a = p_stdnorm(z_a);
       p_b = p_stdnorm(z_b);
@@ -51,8 +51,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("L_A: %.9f\n",val_a_result);
-    printf("L_B: %lf\n",val_b_result);
+    printf("Likelihood for A: %.9f\n",val_a_result);
+    printf("Likelihood for B: %lf\n",val_b_result);
 
     return 0;
 

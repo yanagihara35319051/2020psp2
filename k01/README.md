@@ -103,11 +103,12 @@ aa83988848 薗田光太郎
 ```
 input the filename of sample:heights_male.csv
 the filename of sample: heights_male.csv
-average=173.888750
-variance=25.361711
+average=173.89
+variance=25.36
 
-population variance=22.191497
-population average=173.888750
+population variance=28.98
+population average=173.89
+standard error=1.90
 ```
 
 ## 修正履歴
@@ -122,3 +123,6 @@ population average=173.888750
 - 
 [comment #20200616]
 - 母集団平均が間違っています。(double)Nという記述が原因です。Nの前の(double)を消すと正しい答えが出るでしょう。
+
+修正
+printfでの%lfを%.2fに変更すると正しい答えが出たのでそこを修正
