@@ -11,30 +11,38 @@ aa83988848 薗田光太郎
 この二つのファイルを読み取り，学籍番号，身長，性別の3つをメンバーとする構造体の配列で管理するとよい．
 
 ## ソースコードの説明
-
-
+5～9：構造体の宣言
+11：探したIDがサンプルの中にあったかを判定する変数flagの宣言
+30～46：IDのサンプルデータのファイルの入力
+50～67：身長と性別のサンプルデータのファイルの入力
+72～90：探すIDとサンプルデータを比較し、あったら結果を表示
+92～94：サンプルデータに探したデータがなかった場合、no dataを出力
 ## 入出力結果
 
-例えば，ID 45313125のデータを調べたいとき，
+例えば，ID 45313003のデータを調べたいとき，
 
 ```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313125
----
-ID : 45313125
-gender : Female
-height : 152.4
+input the filename of sample_ID:../sample/IDs.csv
+the filename of sample: ../sample/IDs.csv
+input the filename of sample_heights:../sample/heights.csv
+the filename of sample: ../sample/heights.csv
+Which ID's data do you want? :45313003
+-----
+ID:45313003
+gender:male
+height:174.38
 ```
 
-例えば，ID 45313124のデータを調べたいとき，
+例えば，ID 453123のデータを調べたいとき，
 
 ```
-Input the filename of sample height : ../sample/heights.csv
-Input the filename of sample ID : ../sample/IDs.csv
-Which ID's data do you want? : 45313124
----
-No data
+input the filename of sample_ID:../sample/IDs.csv
+the filename of sample: ../sample/IDs.csv
+input the filename of sample_heights:../sample/heights.csv
+the filename of sample: ../sample/heights.csv
+Which ID's data do you want? :453123
+-----
+no data
 ```
 
 ## 修正履歴
