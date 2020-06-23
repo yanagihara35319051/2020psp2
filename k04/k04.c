@@ -76,11 +76,11 @@ int main(void){
             if(heights_data[i].sex==1){            //性別の出力
                 printf("gender:male\n");  
             }
-            else if(heights_data[i].sex==0){
+            else if(heights_data[i].sex==2){
                 printf("gender:female\n"); 
             }
             else{
-                printf("gender:error/n");
+                printf("gender:error\n");
             }
 
             printf("height:%.2f\n",heights_data[i].height);    //身長の出力
