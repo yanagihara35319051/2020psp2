@@ -51,8 +51,8 @@ int main(void)
         exit(EXIT_FAILURE);
     }
 
-    printf("Likelihood for A: %.9f\n",val_a_result);
-    printf("Likelihood for B: %.9f\n",val_b_result);
+    printf("Likelihood for A: %.7f\n",val_a_result);
+    printf("Likelihood for B: %.7f\n",val_b_result);
 
     return 0;
 
